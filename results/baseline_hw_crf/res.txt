@@ -1,0 +1,103 @@
+n [1]: %run ./code/baseline/structperc.py
+[training...]
+
+
+Training iteration 0
+
+TR  RAW EVAL:
+257890/281057 = 0.9176 accuracy
+DEV RAW EVAL:
+31714/35217 = 0.9005 accuracy
+DEV AVG EVAL:
+31714/35217 = 0.9005 accuracy
+
+
+Training iteration 1
+
+TR  RAW EVAL:
+249500/281057 = 0.8877 accuracy
+DEV RAW EVAL:
+30776/35217 = 0.8739 accuracy
+DEV AVG EVAL:
+31632/35217 = 0.8982 accuracy
+
+
+Training iteration 2
+
+TR  RAW EVAL:
+260284/281057 = 0.9261 accuracy
+DEV RAW EVAL:
+31691/35217 = 0.8999 accuracy
+DEV AVG EVAL:
+32188/35217 = 0.9140 accuracy
+
+
+Training iteration 3
+
+TR  RAW EVAL:
+260490/281057 = 0.9268 accuracy
+DEV RAW EVAL:
+31706/35217 = 0.9003 accuracy
+DEV AVG EVAL:
+32650/35217 = 0.9271 accuracy
+
+
+Training iteration 4
+
+TR  RAW EVAL:
+253269/281057 = 0.9011 accuracy
+DEV RAW EVAL:
+31110/35217 = 0.8834 accuracy
+DEV AVG EVAL:
+32391/35217 = 0.9198 accuracy
+
+
+Training iteration 5
+
+TR  RAW EVAL:
+263368/281057 = 0.9371 accuracy
+DEV RAW EVAL:
+31998/35217 = 0.9086 accuracy
+DEV AVG EVAL:
+32892/35217 = 0.9340 accuracy
+
+
+Training iteration 6
+
+TR  RAW EVAL:
+266168/281057 = 0.9470 accuracy
+DEV RAW EVAL:
+32217/35217 = 0.9148 accuracy
+DEV AVG EVAL:
+32825/35217 = 0.9321 accuracy
+
+
+Training iteration 7
+
+TR  RAW EVAL:
+265319/281057 = 0.9440 accuracy
+DEV RAW EVAL:
+32114/35217 = 0.9119 accuracy
+DEV AVG EVAL:
+32817/35217 = 0.9319 accuracy
+
+
+Training iteration 8
+
+TR  RAW EVAL:
+265038/281057 = 0.9430 accuracy
+DEV RAW EVAL:
+31982/35217 = 0.9081 accuracy
+DEV AVG EVAL:
+32839/35217 = 0.9325 accuracy
+
+
+Training iteration 9
+
+TR  RAW EVAL:
+267385/281057 = 0.9514 accuracy
+DEV RAW EVAL:
+32402/35217 = 0.9201 accuracy
+DEV AVG EVAL:
+32864/35217 = 0.9332 accuracy
+Learned weights for 63703 features from 13304 examples

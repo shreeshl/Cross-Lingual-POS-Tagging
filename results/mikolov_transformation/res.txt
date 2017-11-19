@@ -1,0 +1,8 @@
+Plots of top-50 hindi and english word vectors using PCA 
+(reduced to 2 dimensions). These suggest that there we might not be able to 
+obtain a linear transformation between the two word-vector spaces. 
+
+That is probably why during training, even after many iterations the loss was not
+reducing.
+
+Future work? try a non-linear transformation a.k.a neural network.
