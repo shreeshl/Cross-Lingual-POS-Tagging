@@ -1,5 +1,6 @@
 from __future__ import division
 import numpy as np
+import pickle
 import re
 import codecs
 #import editdistance
@@ -48,6 +49,7 @@ def generate_count_matrix():
 
 model1 = KeyedVectors.load_word2vec_format('/home/ninad/Desktop/NlpProj/data/embedding/GoogleNews-vectors-negative300-SLIM.bin',binary=True)
 
+
 text_file = open("/home/ninad/Desktop/NlpProj/code/baseline/parsed_test_hi.txt", "r")                         
 lines = text_file.readlines()
 
@@ -78,12 +80,42 @@ tagged_list = []
 for j in range(len(nidxs)):
     i2 = nidxs[j]
     esent = enWordList[i1:i2]
-    tagged_list.append(nltk.pos_tag(esent))
+    tags = nltk.pos_tag(esent, tagset='universal')
+    for j in range(len(tags)):
+        tags[j] = list(tags[j])
+    if(len(tags)!=0):
+        tags[-1][-1] = '.'
+    tagged_list.append(tags)
     tagged_list.append('\n')
     i1=i2+1
 
+nlist = [] # making it into similar format as hiTagList
+for i in range(len(tagged_list)):
+    if(tagged_list[i] != '\n'):
+        for wl in tagged_list[i]:
+            nlist.append(wl)
+    else:
+        nlist.append('\n')
+
 with open('/home/ninad/Desktop/NlpProj/code/cmatrix/enTagList.pkl', 'wb') as wfile:
-    pickle.dump(tagged_list, wfile)
+    pickle.dump(nlist, wfile)
+
+hlines = lines
+for i in range(len(hlines)):                                                        
+    if(hlines[i]!='\n'):                                                                                                  
+        hlines[i] = hlines[i].split()
+
+with open('/home/ninad/Desktop/NlpProj/code/cmatrix/hiTagList.pkl', 'wb') as wfile:
+    pickle.dump(hlines, wfile)      
+
+# Saved the processed lists for reporting statistical measures like accuracy,
+# precision-recall, f1score and support
+
+hitags = hlines
+entags = nlist
+
+
+
 
 
 
